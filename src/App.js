@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useRef, useState } from 'react';
 import { Canvas } from 'react-three-fiber';
-//import { OrbitControls, Stats } from 'drei';
+import { OrbitControls, Stats } from 'drei';
 import styled from 'styled-components';
 
 import Sky from './components/Sky';
@@ -67,8 +67,8 @@ function App() {
         {monsters.map(monster => (
           <Monster key={monster.id} {...monster} />
         ))}
-
-
+        <OrbitControls />
+        <Stats />
       </Canvas>
       <TextCardContainer>
         <TextCard
